@@ -1,0 +1,15 @@
+#!/bin/sh
+sudo apt-get update -y
+sudo apt-get install -y firefox
+sudo apt-get install -y  python2.7
+sudo apt-get install -y python-pip
+sudo apt-get install -y openjdk-8-jre-headless
+sudo apt-get install -y xvfb
+sduo apt-get install -y xserver-xorg-core
+pip install browsermob-proxy
+pip install selenium
+sudo apt-get install unzip
+pip install pyvirtualdisplay
+unzip browsermob-proxy-2.1.4-bin.zip
+sudo cp geckodriver /usr/bin
+sudo chmod a+x /usr/bin/geckodriver

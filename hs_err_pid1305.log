@@ -1,0 +1,1025 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 35266560 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2630), pid=1305, tid=0x00007f8bcdb58700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_121-b13) (build 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13)
+# Java VM: OpenJDK 64-Bit Server VM (25.121-b13 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f8bc8095000):  VMThread [stack: 0x00007f8bcda58000,0x00007f8bcdb59000] [id=1307]
+
+Stack: [0x00007f8bcda58000,0x00007f8bcdb59000],  sp=0x00007f8bcdb57510,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xa6647b]
+V  [libjvm.so+0x4c32dc]
+V  [libjvm.so+0x8b4b60]
+V  [libjvm.so+0x8aefde]
+V  [libjvm.so+0xa62d74]
+V  [libjvm.so+0x5c9180]
+V  [libjvm.so+0x5c8efe]
+V  [libjvm.so+0x5b57b8]
+V  [libjvm.so+0x44af7f]
+V  [libjvm.so+0xa67581]
+V  [libjvm.so+0xa6d217]
+V  [libjvm.so+0xa6a9e7]
+V  [libjvm.so+0xa6be6f]
+V  [libjvm.so+0xa6c361]
+V  [libjvm.so+0x8b2042]
+
+VM_Operation (0x00007f8b8f218500): GenCollectForAllocation, mode: safepoint, requested by thread 0x00007f8ba4054000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000001da0000 JavaThread "LittleProxy-8-ProxyToServerWorker-2" [_thread_in_native, id=2444, stack(0x00007f8b8f019000,0x00007f8b8f11a000)]
+  0x00007f8ba4054000 JavaThread "LittleProxy-8-ClientToProxyWorker-2" [_thread_blocked, id=2443, stack(0x00007f8b8f11a000,0x00007f8b8f21b000)]
+  0x00007f8bb41d7800 JavaThread "LittleProxy-8-ProxyToServerWorker-1" [_thread_blocked, id=2421, stack(0x00007f8b8f21b000,0x00007f8b8f31c000)]
+  0x00007f8ba4052800 JavaThread "LittleProxy-8-ClientToProxyWorker-1" [_thread_blocked, id=2420, stack(0x00007f8b8f31c000,0x00007f8b8f41d000)]
+  0x00007f8bb0236800 JavaThread "LittleProxy-8-ProxyToServerWorker-0" [_thread_blocked, id=2411, stack(0x00007f8b8f41d000,0x00007f8b8f51e000)]
+  0x00007f8ba4051000 JavaThread "LittleProxy-8-ClientToProxyWorker-0" [_thread_blocked, id=2409, stack(0x00007f8b8f51e000,0x00007f8b8f61f000)]
+  0x00007f8ba0768000 JavaThread "LittleProxy-8-ClientToProxyAcceptor-0" [_thread_blocked, id=2337, stack(0x00007f8b8f61f000,0x00007f8b8f720000)]
+  0x00007f8bb4188000 JavaThread "LittleProxy-7-ProxyToServerWorker-7" [_thread_blocked, id=2313, stack(0x00007f8b90721000,0x00007f8b90822000)]
+  0x00007f8ba8161000 JavaThread "LittleProxy-7-ProxyToServerWorker-6" [_thread_blocked, id=2312, stack(0x00007f8b90822000,0x00007f8b90923000)]
+  0x00007f8bac402000 JavaThread "LittleProxy-7-ProxyToServerWorker-5" [_thread_blocked, id=2311, stack(0x00007f8b90923000,0x00007f8b90a24000)]
+  0x00007f8bb0233800 JavaThread "LittleProxy-7-ClientToProxyWorker-7" [_thread_blocked, id=2310, stack(0x00007f8b90a24000,0x00007f8b90b25000)]
+  0x00007f8bb0231800 JavaThread "LittleProxy-7-ClientToProxyWorker-6" [_thread_blocked, id=2309, stack(0x00007f8b90b25000,0x00007f8b90c26000)]
+  0x00007f8bb0230000 JavaThread "LittleProxy-7-ClientToProxyWorker-5" [_thread_blocked, id=2308, stack(0x00007f8b90c26000,0x00007f8b90d27000)]
+  0x00007f8ba80b8800 JavaThread "LittleProxy-7-ProxyToServerWorker-4" [_thread_in_native, id=2306, stack(0x00007f8b90d27000,0x00007f8b90e28000)]
+  0x00007f8ba404f800 JavaThread "LittleProxy-7-ProxyToServerWorker-3" [_thread_in_native, id=2305, stack(0x00007f8b90e28000,0x00007f8b90f29000)]
+  0x00007f8bb022e000 JavaThread "LittleProxy-7-ClientToProxyWorker-4" [_thread_blocked, id=2304, stack(0x00007f8b90f29000,0x00007f8b9102a000)]
+  0x00007f8bb022c000 JavaThread "LittleProxy-7-ClientToProxyWorker-3" [_thread_in_native, id=2303, stack(0x00007f8b9102a000,0x00007f8b9112b000)]
+  0x00007f8ba05a3800 JavaThread "LittleProxy-7-ProxyToServerWorker-2" [_thread_in_native, id=2302, stack(0x00007f8b9112b000,0x00007f8b9122c000)]
+  0x00007f8bb022a800 JavaThread "LittleProxy-7-ClientToProxyWorker-2" [_thread_blocked, id=2301, stack(0x00007f8b9122c000,0x00007f8b9132d000)]
+  0x00007f8bc8800800 JavaThread "LittleProxy-7-ProxyToServerWorker-1" [_thread_in_native, id=2279, stack(0x00007f8b9132d000,0x00007f8b9142e000)]
+  0x00007f8bb0229000 JavaThread "LittleProxy-7-ClientToProxyWorker-1" [_thread_blocked, id=2278, stack(0x00007f8b9142e000,0x00007f8b9152f000)]
+  0x00007f8bac007800 JavaThread "LittleProxy-7-ProxyToServerWorker-0" [_thread_in_native, id=2262, stack(0x00007f8b9152f000,0x00007f8b91630000)]
+  0x00007f8bb0227800 JavaThread "LittleProxy-7-ClientToProxyWorker-0" [_thread_blocked, id=2260, stack(0x00007f8b91630000,0x00007f8b91731000)]
+  0x00007f8bb4163800 JavaThread "LittleProxy-7-ClientToProxyAcceptor-0" [_thread_blocked, id=2194, stack(0x00007f8b91731000,0x00007f8b91832000)]
+  0x00007f8ba910e000 JavaThread "LittleProxy-6-ProxyToServerWorker-7" [_thread_blocked, id=2187, stack(0x00007f8b91832000,0x00007f8b91933000)]
+  0x00007f8bac3fc800 JavaThread "LittleProxy-6-ClientToProxyWorker-7" [_thread_blocked, id=2186, stack(0x00007f8b91933000,0x00007f8b91a34000)]
+  0x00007f8ba05a2000 JavaThread "LittleProxy-6-ProxyToServerWorker-6" [_thread_blocked, id=2183, stack(0x00007f8b91a34000,0x00007f8b91b35000)]
+  0x00007f8bac3fb000 JavaThread "LittleProxy-6-ClientToProxyWorker-6" [_thread_blocked, id=2182, stack(0x00007f8b91b35000,0x00007f8b91c36000)]
+  0x00007f8bc87fd000 JavaThread "LittleProxy-6-ProxyToServerWorker-5" [_thread_blocked, id=2181, stack(0x00007f8b91c36000,0x00007f8b91d37000)]
+  0x00007f8bac0cb800 JavaThread "LittleProxy-6-ClientToProxyWorker-5" [_thread_blocked, id=2180, stack(0x00007f8b91d37000,0x00007f8b91e38000)]
+  0x00007f8bac0ca000 JavaThread "LittleProxy-6-ProxyToServerWorker-4" [_thread_blocked, id=2179, stack(0x00007f8b91e38000,0x00007f8b91f39000)]
+  0x00007f8bac0c8000 JavaThread "LittleProxy-6-ClientToProxyWorker-4" [_thread_blocked, id=2178, stack(0x00007f8b91f39000,0x00007f8b9203a000)]
+  0x00007f8ba4045000 JavaThread "LittleProxy-6-ProxyToServerWorker-3" [_thread_blocked, id=2177, stack(0x00007f8b9203a000,0x00007f8b9213b000)]
+  0x00007f8bac0c6000 JavaThread "LittleProxy-6-ClientToProxyWorker-3" [_thread_blocked, id=2176, stack(0x00007f8b9213b000,0x00007f8b9223c000)]
+  0x00007f8b9c22f000 JavaThread "LittleProxy-6-ProxyToServerWorker-2" [_thread_blocked, id=2175, stack(0x00007f8b9223c000,0x00007f8b9233d000)]
+  0x00007f8bac08c000 JavaThread "LittleProxy-6-ClientToProxyWorker-2" [_thread_blocked, id=2174, stack(0x00007f8b9233d000,0x00007f8b9243e000)]
+  0x0000000001d99800 JavaThread "LittleProxy-6-ProxyToServerWorker-1" [_thread_blocked, id=2159, stack(0x00007f8b9243e000,0x00007f8b9253f000)]
+  0x00007f8bac08a800 JavaThread "LittleProxy-6-ClientToProxyWorker-1" [_thread_blocked, id=2158, stack(0x00007f8b9253f000,0x00007f8b92640000)]
+  0x00007f8bb415e000 JavaThread "LittleProxy-6-ProxyToServerWorker-0" [_thread_blocked, id=2141, stack(0x00007f8b92640000,0x00007f8b92741000)]
+  0x00007f8bac088000 JavaThread "LittleProxy-6-ClientToProxyWorker-0" [_thread_blocked, id=2140, stack(0x00007f8b92741000,0x00007f8b92842000)]
+  0x00007f8ba059e800 JavaThread "LittleProxy-6-ClientToProxyAcceptor-0" [_thread_blocked, id=2073, stack(0x00007f8b92842000,0x00007f8b92943000)]
+  0x00007f8ba4043000 JavaThread "LittleProxy-5-ProxyToServerWorker-7" [_thread_blocked, id=2069, stack(0x00007f8b92943000,0x00007f8b92a44000)]
+  0x00007f8bb4169000 JavaThread "LittleProxy-5-ClientToProxyWorker-7" [_thread_blocked, id=2068, stack(0x00007f8b92a44000,0x00007f8b92b45000)]
+  0x00007f8ba03d9800 JavaThread "LittleProxy-5-ProxyToServerWorker-6" [_thread_blocked, id=2066, stack(0x00007f8b92b45000,0x00007f8b92c46000)]
+  0x0000000001b90800 JavaThread "LittleProxy-5-ProxyToServerWorker-5" [_thread_blocked, id=2065, stack(0x00007f8b92c46000,0x00007f8b92d47000)]
+  0x00007f8bb4167800 JavaThread "LittleProxy-5-ClientToProxyWorker-6" [_thread_blocked, id=2064, stack(0x00007f8b92d47000,0x00007f8b92e48000)]
+  0x00007f8bb4166000 JavaThread "LittleProxy-5-ClientToProxyWorker-5" [_thread_blocked, id=2063, stack(0x00007f8b92e48000,0x00007f8b92f49000)]
+  0x00007f8bb40b1000 JavaThread "LittleProxy-5-ProxyToServerWorker-4" [_thread_blocked, id=2062, stack(0x00007f8b92f49000,0x00007f8b9304a000)]
+  0x00007f8bb40c0000 JavaThread "LittleProxy-5-ClientToProxyWorker-4" [_thread_blocked, id=2061, stack(0x00007f8b9304a000,0x00007f8b9314b000)]
+  0x00007f8bb0223000 JavaThread "LittleProxy-5-ProxyToServerWorker-3" [_thread_blocked, id=2059, stack(0x00007f8b9314b000,0x00007f8b9324c000)]
+  0x00007f8bb40be800 JavaThread "LittleProxy-5-ClientToProxyWorker-3" [_thread_blocked, id=2058, stack(0x00007f8b9324c000,0x00007f8b9334d000)]
+  0x00007f8ba82a6800 JavaThread "LittleProxy-5-ProxyToServerWorker-2" [_thread_blocked, id=2056, stack(0x00007f8b9334d000,0x00007f8b9344e000)]
+  0x00007f8bb40bd000 JavaThread "LittleProxy-5-ClientToProxyWorker-2" [_thread_blocked, id=2055, stack(0x00007f8b9344e000,0x00007f8b9354f000)]
+  0x00007f8ba03d8000 JavaThread "LittleProxy-5-ProxyToServerWorker-1" [_thread_blocked, id=2041, stack(0x00007f8b9354f000,0x00007f8b93650000)]
+  0x00007f8bb4157000 JavaThread "LittleProxy-5-ClientToProxyWorker-1" [_thread_blocked, id=2039, stack(0x00007f8b93650000,0x00007f8b93751000)]
+  0x00007f8bc87f5800 JavaThread "LittleProxy-5-ProxyToServerWorker-0" [_thread_blocked, id=2014, stack(0x00007f8b93751000,0x00007f8b93852000)]
+  0x00007f8bb4155800 JavaThread "LittleProxy-5-ClientToProxyWorker-0" [_thread_blocked, id=2012, stack(0x00007f8b93852000,0x00007f8b93953000)]
+  0x00007f8bb0004000 JavaThread "LittleProxy-5-ClientToProxyAcceptor-0" [_thread_blocked, id=1948, stack(0x00007f8b93953000,0x00007f8b93a54000)]
+  0x0000000001d92000 JavaThread "LittleProxy-4-ProxyToServerWorker-7" [_thread_blocked, id=1939, stack(0x00007f8b93a54000,0x00007f8b93b55000)]
+  0x00007f8ba03d5800 JavaThread "LittleProxy-4-ProxyToServerWorker-6" [_thread_blocked, id=1938, stack(0x00007f8b93b55000,0x00007f8b93c56000)]
+  0x00007f8b9c4f4000 JavaThread "LittleProxy-4-ProxyToServerWorker-5" [_thread_blocked, id=1937, stack(0x00007f8b93c56000,0x00007f8b93d57000)]
+  0x00007f8bc860b800 JavaThread "LittleProxy-4-ClientToProxyWorker-7" [_thread_blocked, id=1936, stack(0x00007f8b93d57000,0x00007f8b93e58000)]
+  0x00007f8bc860a000 JavaThread "LittleProxy-4-ClientToProxyWorker-6" [_thread_blocked, id=1935, stack(0x00007f8b93e58000,0x00007f8b93f59000)]
+  0x00007f8bc8608800 JavaThread "LittleProxy-4-ClientToProxyWorker-5" [_thread_blocked, id=1934, stack(0x00007f8b93f59000,0x00007f8b9405a000)]
+  0x00007f8bc8606800 JavaThread "LittleProxy-4-ProxyToServerWorker-4" [_thread_blocked, id=1931, stack(0x00007f8b9405a000,0x00007f8b9415b000)]
+  0x00007f8bc8604800 JavaThread "LittleProxy-4-ClientToProxyWorker-4" [_thread_blocked, id=1930, stack(0x00007f8b9415b000,0x00007f8b9425c000)]
+  0x00007f8bac073000 JavaThread "LittleProxy-4-ProxyToServerWorker-3" [_thread_blocked, id=1929, stack(0x00007f8b9425c000,0x00007f8b9435d000)]
+  0x00007f8bc8603000 JavaThread "LittleProxy-4-ClientToProxyWorker-3" [_thread_blocked, id=1928, stack(0x00007f8b9435d000,0x00007f8b9445e000)]
+  0x00007f8ba403b000 JavaThread "LittleProxy-4-ProxyToServerWorker-2" [_thread_blocked, id=1927, stack(0x00007f8b9445e000,0x00007f8b9455f000)]
+  0x00007f8bc8601800 JavaThread "LittleProxy-4-ClientToProxyWorker-2" [_thread_blocked, id=1926, stack(0x00007f8b9455f000,0x00007f8b94660000)]
+  0x00007f8b9c4f3800 JavaThread "LittleProxy-4-ProxyToServerWorker-1" [_thread_blocked, id=1911, stack(0x00007f8b94660000,0x00007f8b94761000)]
+  0x00007f8bc85ff800 JavaThread "LittleProxy-4-ClientToProxyWorker-1" [_thread_blocked, id=1910, stack(0x00007f8b94761000,0x00007f8b94862000)]
+  0x0000000001d89000 JavaThread "LittleProxy-4-ProxyToServerWorker-0" [_thread_blocked, id=1893, stack(0x00007f8b94862000,0x00007f8b94963000)]
+  0x00007f8bc85fe800 JavaThread "LittleProxy-4-ClientToProxyWorker-0" [_thread_blocked, id=1892, stack(0x00007f8b94963000,0x00007f8b94a64000)]
+  0x00007f8bc85fd800 JavaThread "LittleProxy-4-ClientToProxyAcceptor-0" [_thread_blocked, id=1825, stack(0x00007f8b94a64000,0x00007f8b94b65000)]
+  0x00007f8ba03d3000 JavaThread "LittleProxy-3-ProxyToServerWorker-7" [_thread_blocked, id=1806, stack(0x00007f8b94b65000,0x00007f8b94c66000)]
+  0x00007f8ba03cb800 JavaThread "LittleProxy-3-ProxyToServerWorker-6" [_thread_blocked, id=1805, stack(0x00007f8b94c66000,0x00007f8b94d67000)]
+  0x0000000001d87000 JavaThread "LittleProxy-3-ClientToProxyWorker-7" [_thread_blocked, id=1804, stack(0x00007f8b94d67000,0x00007f8b94e68000)]
+  0x0000000001d85800 JavaThread "LittleProxy-3-ClientToProxyWorker-6" [_thread_blocked, id=1803, stack(0x00007f8b94e68000,0x00007f8b94f69000)]
+  0x0000000001d83800 JavaThread "LittleProxy-3-ClientToProxyWorker-5" [_thread_blocked, id=1802, stack(0x00007f8b94f69000,0x00007f8b9506a000)]
+  0x00007f8ba03ca000 JavaThread "LittleProxy-3-ProxyToServerWorker-5" [_thread_blocked, id=1799, stack(0x00007f8b9506a000,0x00007f8b9516b000)]
+  0x0000000001d82000 JavaThread "LittleProxy-3-ClientToProxyWorker-4" [_thread_blocked, id=1798, stack(0x00007f8b9516b000,0x00007f8b9526c000)]
+  0x00007f8bc85fa000 JavaThread "LittleProxy-3-ProxyToServerWorker-4" [_thread_blocked, id=1797, stack(0x00007f8b9526c000,0x00007f8b9536d000)]
+  0x0000000001d80000 JavaThread "LittleProxy-3-ClientToProxyWorker-3" [_thread_blocked, id=1796, stack(0x00007f8b9536d000,0x00007f8b9546e000)]
+  0x00007f8bb0050800 JavaThread "LittleProxy-3-ProxyToServerWorker-3" [_thread_blocked, id=1795, stack(0x00007f8b9546e000,0x00007f8b9556f000)]
+  0x00007f8bb004e000 JavaThread "LittleProxy-3-ProxyToServerWorker-2" [_thread_blocked, id=1794, stack(0x00007f8b9556f000,0x00007f8b95670000)]
+  0x0000000001d7e800 JavaThread "LittleProxy-3-ClientToProxyWorker-2" [_thread_blocked, id=1793, stack(0x00007f8b95670000,0x00007f8b95771000)]
+  0x00007f8ba81ee000 JavaThread "LittleProxy-3-ProxyToServerWorker-1" [_thread_blocked, id=1779, stack(0x00007f8b95771000,0x00007f8b95872000)]
+  0x0000000001d7c800 JavaThread "LittleProxy-3-ClientToProxyWorker-1" [_thread_blocked, id=1777, stack(0x00007f8b95872000,0x00007f8b95973000)]
+  0x00007f8ba03c5000 JavaThread "LittleProxy-3-ProxyToServerWorker-0" [_thread_blocked, id=1760, stack(0x00007f8b95973000,0x00007f8b95a74000)]
+  0x0000000001d7b000 JavaThread "LittleProxy-3-ClientToProxyWorker-0" [_thread_blocked, id=1759, stack(0x00007f8b95a74000,0x00007f8b95b75000)]
+  0x00007f8ba03c2800 JavaThread "LittleProxy-3-ClientToProxyAcceptor-0" [_thread_blocked, id=1703, stack(0x00007f8b95b75000,0x00007f8b95c76000)]
+  0x00007f8b9c56a800 JavaThread "LittleProxy-2-ProxyToServerWorker-5" [_thread_blocked, id=1673, stack(0x00007f8b95c76000,0x00007f8b95d77000)]
+  0x00007f8ba01f8800 JavaThread "LittleProxy-2-ProxyToServerWorker-6" [_thread_blocked, id=1672, stack(0x00007f8b95d77000,0x00007f8b95e78000)]
+  0x00007f8ba4030000 JavaThread "LittleProxy-2-ProxyToServerWorker-7" [_thread_blocked, id=1671, stack(0x00007f8b95e78000,0x00007f8b95f79000)]
+  0x00007f8bc82d4800 JavaThread "LittleProxy-2-ProxyToServerWorker-4" [_thread_blocked, id=1670, stack(0x00007f8b95f79000,0x00007f8b9607a000)]
+  0x00007f8ba01f6800 JavaThread "LittleProxy-2-ClientToProxyWorker-7" [_thread_blocked, id=1669, stack(0x00007f8b9607a000,0x00007f8b9617b000)]
+  0x00007f8ba01f4800 JavaThread "LittleProxy-2-ClientToProxyWorker-6" [_thread_blocked, id=1668, stack(0x00007f8b9617b000,0x00007f8b9627c000)]
+  0x00007f8ba01f2800 JavaThread "LittleProxy-2-ClientToProxyWorker-5" [_thread_blocked, id=1667, stack(0x00007f8b9627c000,0x00007f8b9637d000)]
+  0x00007f8ba01f1000 JavaThread "LittleProxy-2-ClientToProxyWorker-4" [_thread_blocked, id=1666, stack(0x00007f8b9637d000,0x00007f8b9647e000)]
+  0x00007f8bc837d800 JavaThread "LittleProxy-2-ProxyToServerWorker-3" [_thread_blocked, id=1663, stack(0x00007f8b9647e000,0x00007f8b9657f000)]
+  0x00007f8ba01ef000 JavaThread "LittleProxy-2-ClientToProxyWorker-3" [_thread_blocked, id=1662, stack(0x00007f8b9657f000,0x00007f8b96680000)]
+  0x00007f8bac070800 JavaThread "LittleProxy-2-ProxyToServerWorker-2" [_thread_blocked, id=1661, stack(0x00007f8b96680000,0x00007f8b96781000)]
+  0x00007f8ba01ed800 JavaThread "LittleProxy-2-ClientToProxyWorker-2" [_thread_blocked, id=1660, stack(0x00007f8b96781000,0x00007f8b96882000)]
+  0x00007f8ba402c800 JavaThread "LittleProxy-2-ProxyToServerWorker-1" [_thread_blocked, id=1645, stack(0x00007f8b96882000,0x00007f8b96983000)]
+  0x00007f8ba0029800 JavaThread "LittleProxy-2-ClientToProxyWorker-1" [_thread_blocked, id=1644, stack(0x00007f8b96983000,0x00007f8b96a84000)]
+  0x00007f8b9c4c2800 JavaThread "LittleProxy-2-ProxyToServerWorker-0" [_thread_blocked, id=1627, stack(0x00007f8b96a84000,0x00007f8b96b85000)]
+  0x00007f8ba0028800 JavaThread "LittleProxy-2-ClientToProxyWorker-0" [_thread_blocked, id=1626, stack(0x00007f8b96b85000,0x00007f8b96c86000)]
+  0x0000000001d70800 JavaThread "LittleProxy-2-ClientToProxyAcceptor-0" [_thread_blocked, id=1561, stack(0x00007f8b96c86000,0x00007f8b96d87000)]
+  0x00007f8ba8a6c800 JavaThread "LittleProxy-1-ProxyToServerWorker-7" [_thread_blocked, id=1553, stack(0x00007f8b96d87000,0x00007f8b96e88000)]
+  0x00007f8bb003f800 JavaThread "LittleProxy-1-ProxyToServerWorker-6" [_thread_blocked, id=1552, stack(0x00007f8b96e88000,0x00007f8b96f89000)]
+  0x0000000001bac800 JavaThread "LittleProxy-1-ProxyToServerWorker-5" [_thread_blocked, id=1551, stack(0x00007f8b96f89000,0x00007f8b9708a000)]
+  0x00007f8b9c313000 JavaThread "LittleProxy-1-ClientToProxyWorker-7" [_thread_blocked, id=1550, stack(0x00007f8b9708a000,0x00007f8b9718b000)]
+  0x00007f8b9c312000 JavaThread "LittleProxy-1-ClientToProxyWorker-6" [_thread_blocked, id=1549, stack(0x00007f8b9718b000,0x00007f8b9728c000)]
+  0x00007f8b9c315000 JavaThread "LittleProxy-1-ClientToProxyWorker-5" [_thread_blocked, id=1548, stack(0x00007f8b9728c000,0x00007f8b9738d000)]
+  0x00007f8b9c398800 JavaThread "LittleProxy-1-ClientToProxyWorker-4" [_thread_blocked, id=1547, stack(0x00007f8b9738d000,0x00007f8b9748e000)]
+  0x00007f8bb40c2800 JavaThread "LittleProxy-1-ProxyToServerWorker-4" [_thread_blocked, id=1544, stack(0x00007f8b9748e000,0x00007f8b9758f000)]
+  0x0000000001baa800 JavaThread "LittleProxy-1-ProxyToServerWorker-3" [_thread_blocked, id=1543, stack(0x00007f8b9758f000,0x00007f8b97690000)]
+  0x00007f8b9c1ea000 JavaThread "LittleProxy-1-ClientToProxyWorker-3" [_thread_blocked, id=1542, stack(0x00007f8b97690000,0x00007f8b97791000)]
+  0x00007f8bb40a9800 JavaThread "LittleProxy-1-ProxyToServerWorker-2" [_thread_blocked, id=1541, stack(0x00007f8b97791000,0x00007f8b97892000)]
+  0x00007f8b9c09a800 JavaThread "LittleProxy-1-ClientToProxyWorker-2" [_thread_blocked, id=1540, stack(0x00007f8b97892000,0x00007f8b97993000)]
+  0x00007f8bb003c800 JavaThread "LittleProxy-1-ProxyToServerWorker-1" [_thread_blocked, id=1524, stack(0x00007f8b97993000,0x00007f8b97a94000)]
+  0x00007f8b9c0f6000 JavaThread "LittleProxy-1-ClientToProxyWorker-1" [_thread_blocked, id=1523, stack(0x00007f8b97a94000,0x00007f8b97b95000)]
+  0x00007f8ba80a2000 JavaThread "LittleProxy-1-ProxyToServerWorker-0" [_thread_blocked, id=1507, stack(0x00007f8b97b95000,0x00007f8b97c96000)]
+  0x00007f8b9c199000 JavaThread "LittleProxy-1-ClientToProxyWorker-0" [_thread_blocked, id=1506, stack(0x00007f8b97c96000,0x00007f8b97d97000)]
+  0x00007f8ba0027800 JavaThread "LittleProxy-1-ClientToProxyAcceptor-0" [_thread_blocked, id=1441, stack(0x00007f8b97d97000,0x00007f8b97e98000)]
+  0x00007f8bc8322800 JavaThread "LittleProxy-0-ProxyToServerWorker-7" [_thread_blocked, id=1431, stack(0x00007f8b98298000,0x00007f8b98399000)]
+  0x0000000001b9c800 JavaThread "LittleProxy-0-ProxyToServerWorker-6" [_thread_blocked, id=1430, stack(0x00007f8b98399000,0x00007f8b9849a000)]
+  0x00007f8b9c138000 JavaThread "LittleProxy-0-ClientToProxyWorker-7" [_thread_blocked, id=1429, stack(0x00007f8b9849a000,0x00007f8b9859b000)]
+  0x00007f8b9c35d800 JavaThread "LittleProxy-0-ClientToProxyWorker-6" [_thread_blocked, id=1428, stack(0x00007f8b9859b000,0x00007f8b9869c000)]
+  0x00007f8b9c318000 JavaThread "LittleProxy-0-ClientToProxyWorker-5" [_thread_blocked, id=1427, stack(0x00007f8b9869c000,0x00007f8b9879d000)]
+  0x0000000001b9b000 JavaThread "LittleProxy-0-ProxyToServerWorker-5" [_thread_blocked, id=1426, stack(0x00007f8b9879d000,0x00007f8b9889e000)]
+  0x00007f8b9c0e4800 JavaThread "LittleProxy-0-ClientToProxyWorker-4" [_thread_blocked, id=1425, stack(0x00007f8b9889e000,0x00007f8b9899f000)]
+  0x0000000001b97800 JavaThread "LittleProxy-0-ProxyToServerWorker-4" [_thread_blocked, id=1423, stack(0x00007f8b9899f000,0x00007f8b98aa0000)]
+  0x00007f8bc8610800 JavaThread "LittleProxy-0-ProxyToServerWorker-3" [_thread_blocked, id=1422, stack(0x00007f8b98aa0000,0x00007f8b98ba1000)]
+  0x0000000001b96800 JavaThread "LittleProxy-0-ProxyToServerWorker-2" [_thread_blocked, id=1421, stack(0x00007f8b98ba1000,0x00007f8b98ca2000)]
+  0x00007f8b9c130800 JavaThread "LittleProxy-0-ClientToProxyWorker-3" [_thread_blocked, id=1420, stack(0x00007f8b98ca2000,0x00007f8b98da3000)]
+  0x00007f8b9c0af000 JavaThread "LittleProxy-0-ClientToProxyWorker-2" [_thread_blocked, id=1419, stack(0x00007f8b98da3000,0x00007f8b98ea4000)]
+  0x00007f8bac09f000 JavaThread "LittleProxy-0-ProxyToServerWorker-1" [_thread_blocked, id=1411, stack(0x00007f8b98ea4000,0x00007f8b98fa5000)]
+  0x00007f8b9c536800 JavaThread "LittleProxy-0-ClientToProxyWorker-1" [_thread_blocked, id=1408, stack(0x00007f8b99fcf000,0x00007f8b9a0d0000)]
+  0x00007f8ba8e36800 JavaThread "LittleProxy-0-ProxyToServerWorker-0" [_thread_blocked, id=1387, stack(0x00007f8b9a0d0000,0x00007f8b9a1d1000)]
+  0x00007f8ba891a000 JavaThread "threadDeathWatcher-2-1" daemon [_thread_blocked, id=1386, stack(0x00007f8b9b3d2000,0x00007f8b9b4d3000)]
+  0x00007f8b9c350800 JavaThread "LittleProxy-0-ClientToProxyWorker-0" [_thread_blocked, id=1384, stack(0x00007f8b9b4d3000,0x00007f8b9b5d4000)]
+  0x00007f8bac3d2800 JavaThread "LittleProxy-0-ClientToProxyAcceptor-0" [_thread_blocked, id=1327, stack(0x00007f8bb80d5000,0x00007f8bb81d6000)]
+  0x00007f8bc85ee000 JavaThread "qtp2053628870-19" [_thread_blocked, id=1326, stack(0x00007f8bb81d6000,0x00007f8bb82d7000)]
+  0x00007f8bc85ec000 JavaThread "qtp2053628870-18" [_thread_blocked, id=1325, stack(0x00007f8bb82d7000,0x00007f8bb83d8000)]
+  0x00007f8bc85ea000 JavaThread "qtp2053628870-17" [_thread_blocked, id=1324, stack(0x00007f8bb83d8000,0x00007f8bb84d9000)]
+  0x00007f8bc85e8000 JavaThread "qtp2053628870-16" [_thread_blocked, id=1323, stack(0x00007f8bb84d9000,0x00007f8bb85da000)]
+  0x00007f8bc85e6000 JavaThread "qtp2053628870-15" [_thread_blocked, id=1322, stack(0x00007f8bb85da000,0x00007f8bb86db000)]
+  0x00007f8bc85e4800 JavaThread "qtp2053628870-14" [_thread_blocked, id=1321, stack(0x00007f8bb86db000,0x00007f8bb87dc000)]
+  0x00007f8bc85e2800 JavaThread "qtp2053628870-13" [_thread_in_native, id=1320, stack(0x00007f8bb87dc000,0x00007f8bb88dd000)]
+  0x00007f8bc85e1000 JavaThread "qtp2053628870-12 - Acceptor0 SelectChannelConnector@0.0.0.0:8080" [_thread_blocked, id=1319, stack(0x00007f8bb88dd000,0x00007f8bb89de000)]
+  0x00007f8bc85af800 JavaThread "HashSessionScavenger-0" daemon [_thread_blocked, id=1318, stack(0x00007f8bcc057000,0x00007f8bcc158000)]
+  0x00007f8bc823f000 JavaThread "com.google.inject.internal.util.$Finalizer" daemon [_thread_blocked, id=1317, stack(0x00007f8bcc966000,0x00007f8bcca67000)]
+  0x00007f8bc80e4800 JavaThread "Service Thread" daemon [_thread_blocked, id=1315, stack(0x00007f8bcd452000,0x00007f8bcd553000)]
+  0x00007f8bc80cd800 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=1314, stack(0x00007f8bcd553000,0x00007f8bcd654000)]
+  0x00007f8bc80cb000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1313, stack(0x00007f8bcd654000,0x00007f8bcd755000)]
+  0x00007f8bc80c9000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1312, stack(0x00007f8bcd755000,0x00007f8bcd856000)]
+  0x00007f8bc80a1000 JavaThread "Finalizer" daemon [_thread_blocked, id=1311, stack(0x00007f8bcd856000,0x00007f8bcd957000)]
+  0x00007f8bc809c800 JavaThread "Reference Handler" daemon [_thread_blocked, id=1308, stack(0x00007f8bcd957000,0x00007f8bcda58000)]
+  0x00007f8bc800a000 JavaThread "main" [_thread_blocked, id=1306, stack(0x00007f8bd1f98000,0x00007f8bd2099000)]
+
+Other Threads:
+=>0x00007f8bc8095000 VMThread [stack: 0x00007f8bcda58000,0x00007f8bcdb59000] [id=1307]
+  0x00007f8bc80e7800 WatcherThread [stack: 0x00007f8bcd351000,0x00007f8bcd452000] [id=1316]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f8bc8006340] Threads_lock - owner thread: 0x00007f8bc8095000
+[0x00007f8bc8006840] Heap_lock - owner thread: 0x00007f8ba4054000
+
+Heap:
+ def new generation   total 34880K, used 0K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,   0% used [0x00000000f0800000, 0x00000000f0800000, 0x00000000f2650000)
+  from space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+  to   space 3840K,   0% used [0x00000000f2a10000, 0x00000000f2a10000, 0x00000000f2dd0000)
+ tenured generation   total 77576K, used 67208K [0x00000000f5aa0000, 0x00000000fa662000, 0x0000000100000000)
+   the space 77576K,  86% used [0x00000000f5aa0000, 0x00000000f9c42308, 0x00000000f9c42400, 0x00000000fa662000)
+ Metaspace       used 33814K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+
+Card table byte_map: [0x00007f8bd1f1b000,0x00007f8bd1f98000] byte_map_base: 0x00007f8bd1797000
+
+Polling page: 0x00007f8bd20a7000
+
+CodeCache: size=245760Kb used=20733Kb max_used=20746Kb free=225026Kb
+ bounds [0x00007f8bb9000000, 0x00007f8bba470000, 0x00007f8bc8000000]
+ total_blobs=6770 nmethods=6271 adapters=412
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 941.708 Thread 0x00007f8bc80cd800 8085   !   3       sun.security.ssl.ClientHandshaker::serverCertificate (225 bytes)
+Event: 941.709 Thread 0x00007f8bc80cd800 nmethod 8085 0x00007f8bba4657d0 code [0x00007f8bba465b20, 0x00007f8bba467b70]
+Event: 941.886 Thread 0x00007f8bc80cb000 8089 % !   4       sun.nio.cs.US_ASCII$Encoder::encodeArrayLoop @ 129 (356 bytes)
+Event: 941.888 Thread 0x00007f8bc80cd800 8087       3       java.lang.Class::getPackage (5 bytes)
+Event: 941.888 Thread 0x00007f8bc80cd800 nmethod 8087 0x00007f8bba45c7d0 code [0x00007f8bba45c940, 0x00007f8bba45cac0]
+Event: 941.889 Thread 0x00007f8bc80cd800 8088       3       java.lang.Package::getPackage (46 bytes)
+Event: 941.892 Thread 0x00007f8bc80cd800 nmethod 8088 0x00007f8bba45e6d0 code [0x00007f8bba45e920, 0x00007f8bba45f8f8]
+Event: 941.893 Thread 0x00007f8bc80cd800 8090       3       org.apache.logging.log4j.core.impl.ExtendedClassInfo::renderOn (78 bytes)
+Event: 941.893 Thread 0x00007f8bc80cd800 nmethod 8090 0x00007f8bb9531dd0 code [0x00007f8bb9532000, 0x00007f8bb9532ba8]
+Event: 941.920 Thread 0x00007f8bc80cb000 nmethod 8089% 0x00007f8bb95daa50 code [0x00007f8bb95dac00, 0x00007f8bb95db2d8]
+
+GC Heap History (10 events):
+Event: 573.600 GC heap after
+Heap after GC invocations=298 (full 6):
+ def new generation   total 34880K, used 1678K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,   0% used [0x00000000f0800000, 0x00000000f0800000, 0x00000000f2650000)
+  from space 3840K,  43% used [0x00000000f2a10000, 0x00000000f2bb3a90, 0x00000000f2dd0000)
+  to   space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33791K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+}
+Event: 579.961 GC heap before
+{Heap before GC invocations=298 (full 6):
+ def new generation   total 34880K, used 32715K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,  99% used [0x00000000f0800000, 0x00000000f264f380, 0x00000000f2650000)
+  from space 3840K,  43% used [0x00000000f2a10000, 0x00000000f2bb3a90, 0x00000000f2dd0000)
+  to   space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33791K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+Event: 580.000 GC heap after
+Heap after GC invocations=299 (full 6):
+ def new generation   total 34880K, used 1749K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,   0% used [0x00000000f0800000, 0x00000000f0800000, 0x00000000f2650000)
+  from space 3840K,  45% used [0x00000000f2650000, 0x00000000f2805638, 0x00000000f2a10000)
+  to   space 3840K,   0% used [0x00000000f2a10000, 0x00000000f2a10000, 0x00000000f2dd0000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33791K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+}
+Event: 590.055 GC heap before
+{Heap before GC invocations=299 (full 6):
+ def new generation   total 34880K, used 32789K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K, 100% used [0x00000000f0800000, 0x00000000f2650000, 0x00000000f2650000)
+  from space 3840K,  45% used [0x00000000f2650000, 0x00000000f2805638, 0x00000000f2a10000)
+  to   space 3840K,   0% used [0x00000000f2a10000, 0x00000000f2a10000, 0x00000000f2dd0000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33792K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+Event: 590.112 GC heap after
+Heap after GC invocations=300 (full 6):
+ def new generation   total 34880K, used 1880K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,   0% used [0x00000000f0800000, 0x00000000f0800000, 0x00000000f2650000)
+  from space 3840K,  48% used [0x00000000f2a10000, 0x00000000f2be6108, 0x00000000f2dd0000)
+  to   space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33792K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+}
+Event: 598.009 GC heap before
+{Heap before GC invocations=300 (full 6):
+ def new generation   total 34880K, used 32920K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K, 100% used [0x00000000f0800000, 0x00000000f2650000, 0x00000000f2650000)
+  from space 3840K,  48% used [0x00000000f2a10000, 0x00000000f2be6108, 0x00000000f2dd0000)
+  to   space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33802K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+Event: 598.078 GC heap after
+Heap after GC invocations=301 (full 6):
+ def new generation   total 34880K, used 2068K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,   0% used [0x00000000f0800000, 0x00000000f0800000, 0x00000000f2650000)
+  from space 3840K,  53% used [0x00000000f2650000, 0x00000000f28553c8, 0x00000000f2a10000)
+  to   space 3840K,   0% used [0x00000000f2a10000, 0x00000000f2a10000, 0x00000000f2dd0000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33802K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+}
+Event: 941.572 GC heap before
+{Heap before GC invocations=301 (full 6):
+ def new generation   total 34880K, used 33108K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K, 100% used [0x00000000f0800000, 0x00000000f2650000, 0x00000000f2650000)
+  from space 3840K,  53% used [0x00000000f2650000, 0x00000000f28553c8, 0x00000000f2a10000)
+  to   space 3840K,   0% used [0x00000000f2a10000, 0x00000000f2a10000, 0x00000000f2dd0000)
+ tenured generation   total 76424K, used 73912K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa2ce298, 0x00000000fa2ce400, 0x00000000fa542000)
+ Metaspace       used 33809K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+Event: 941.583 GC heap after
+Heap after GC invocations=302 (full 6):
+ def new generation   total 34880K, used 3408K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K,   0% used [0x00000000f0800000, 0x00000000f0800000, 0x00000000f2650000)
+  from space 3840K,  88% used [0x00000000f2a10000, 0x00000000f2d641c0, 0x00000000f2dd0000)
+  to   space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+ tenured generation   total 76424K, used 74127K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa303fd0, 0x00000000fa304000, 0x00000000fa542000)
+ Metaspace       used 33809K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+}
+Event: 945.555 GC heap before
+{Heap before GC invocations=302 (full 6):
+ def new generation   total 34880K, used 34448K [0x00000000f0800000, 0x00000000f2dd0000, 0x00000000f5aa0000)
+  eden space 31040K, 100% used [0x00000000f0800000, 0x00000000f2650000, 0x00000000f2650000)
+  from space 3840K,  88% used [0x00000000f2a10000, 0x00000000f2d641c0, 0x00000000f2dd0000)
+  to   space 3840K,   0% used [0x00000000f2650000, 0x00000000f2650000, 0x00000000f2a10000)
+ tenured generation   total 76424K, used 74127K [0x00000000f5aa0000, 0x00000000fa542000, 0x0000000100000000)
+   the space 76424K,  96% used [0x00000000f5aa0000, 0x00000000fa303fd0, 0x00000000fa304000, 0x00000000fa542000)
+ Metaspace       used 33814K, capacity 34294K, committed 34560K, reserved 1079296K
+  class space    used 3885K, capacity 4033K, committed 4096K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 474.489 Thread 0x00007f8bac08c000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb9ef0f74 method=io.netty.handler.codec.http.HttpHeadersEncoder.encoderHeader(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lio/netty/buffer/ByteBuf;)V @ 8
+Event: 475.235 Thread 0x00007f8ba4045000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb9e7ffb0 method=io.netty.handler.codec.http.DefaultHttpHeaders$HeaderValueConverterAndValidator.convertObject(Ljava/lang/Object;)Ljava/lang/CharSequence; @ 14
+Event: 475.235 Thread 0x00007f8ba4045000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb9d92490 method=io.netty.util.AsciiString$1.equals(Ljava/lang/Object;Ljava/lang/Object;)Z @ 6
+Event: 475.235 Thread 0x00007f8ba4045000 Uncommon trap: reason=speculate_class_check action=maybe_recompile pc=0x00007f8bb993e678 method=io.netty.util.AsciiString.contentEqualsIgnoreCase(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z @ 43
+Event: 475.235 Thread 0x00007f8bac0c6000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb9ef0f74 method=io.netty.handler.codec.http.HttpHeadersEncoder.encoderHeader(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Lio/netty/buffer/ByteBuf;)V @ 8
+Event: 493.067 Thread 0x00007f8ba05a2000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb94c5fb0 method=java.util.Collections$UnmodifiableList.get(I)Ljava/lang/Object; @ 5
+Event: 493.067 Thread 0x00007f8ba05a2000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb94c5fb0 method=java.util.Collections$UnmodifiableList.get(I)Ljava/lang/Object; @ 5
+Event: 493.067 Thread 0x00007f8ba05a2000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb94c5fb0 method=java.util.Collections$UnmodifiableList.get(I)Ljava/lang/Object; @ 5
+Event: 493.068 Thread 0x00007f8ba05a2000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f8bb94c5fb0 method=java.util.Collections$UnmodifiableList.get(I)Ljava/lang/Object; @ 5
+Event: 579.870 Thread 0x00007f8bac402000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f8bb9bbd3f4 method=io.netty.buffer.PoolChunk.allocateNode(I)I @ 17
+
+Internal exceptions (10 events):
+Event: 501.551 Thread 0x00007f8bac3fc800 Exception <a 'java/io/IOException'> (0x00000000f13f4550) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 501.560 Thread 0x00007f8bac3fc800 Exception <a 'java/io/IOException'> (0x00000000f1f12ef8) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 501.560 Thread 0x00007f8bac3fb000 Exception <a 'java/io/IOException'> (0x00000000f110fa80) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 501.561 Thread 0x00007f8bac3fc800 Exception <a 'java/io/IOException'> (0x00000000f1f14878) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 501.564 Thread 0x00007f8bac3fb000 Exception <a 'java/io/IOException'> (0x00000000f1f2f320) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 502.267 Thread 0x00007f8bac0cb800 Exception <a 'java/io/IOException'> (0x00000000f1b5bdb8) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 502.580 Thread 0x00007f8bac088000 Exception <a 'java/io/IOException'> (0x00000000f1bfc988) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 525.828 Thread 0x00007f8bb0227800 Exception <a 'java/io/IOException'> (0x00000000f1c14e90) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 590.718 Thread 0x00007f8bac007800 Exception <a 'java/io/IOException'> (0x00000000f1289360) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 892.776 Thread 0x00007f8bac007800 Exception <a 'java/io/IOException'> (0x00000000f0b31a38) thrown at [/build/openjdk-8-YiEakL/openjdk-8-8u121-b13/src/hotspot/src/share/vm/prims/jni.cpp, line 709]
+
+Events (10 events):
+Event: 941.888 Thread 0x00007f8bc80cd800 flushing nmethod 0x00007f8bb9531dd0
+Event: 941.888 Thread 0x00007f8bc80cd800 flushing nmethod 0x00007f8bb95da810
+Event: 941.888 Thread 0x00007f8bc80cd800 flushing nmethod 0x00007f8bb95dac50
+Event: 941.888 Thread 0x00007f8bc80cd800 flushing nmethod 0x00007f8bb95df510
+Event: 941.893 Thread 0x00007f8bc80cd800 flushing nmethod 0x00007f8bb97635d0
+Event: 945.102 Thread 0x00007f8ba4054000 Thread added: 0x00007f8ba4054000
+Event: 945.247 Thread 0x0000000001da0000 Thread added: 0x0000000001da0000
+Event: 945.264 Executing VM operation: RevokeBias
+Event: 945.277 Executing VM operation: RevokeBias done
+Event: 945.540 Executing VM operation: GenCollectForAllocation
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 ca:01 160556                             /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 ca:01 160556                             /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 ca:01 160556                             /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+01b7a000-01dc2000 rw-p 00000000 00:00 0                                  [heap]
+f0800000-f2dd0000 rw-p 00000000 00:00 0 
+f2dd0000-f5aa0000 ---p 00000000 00:00 0 
+f5aa0000-fa662000 rw-p 00000000 00:00 0 
+fc804000-100000000 ---p 00000000 00:00 0 
+100000000-100400000 rw-p 00000000 00:00 0 
+100400000-140000000 ---p 00000000 00:00 0 
+7f8b8f019000-7f8b8f01c000 ---p 00000000 00:00 0 
+7f8b8f01c000-7f8b8f11a000 rw-p 00000000 00:00 0 
+7f8b8f11a000-7f8b8f11d000 ---p 00000000 00:00 0 
+7f8b8f11d000-7f8b8f21b000 rw-p 00000000 00:00 0 
+7f8b8f21b000-7f8b8f21e000 ---p 00000000 00:00 0 
+7f8b8f21e000-7f8b8f31c000 rw-p 00000000 00:00 0 
+7f8b8f31c000-7f8b8f31f000 ---p 00000000 00:00 0 
+7f8b8f31f000-7f8b8f41d000 rw-p 00000000 00:00 0 
+7f8b8f41d000-7f8b8f420000 ---p 00000000 00:00 0 
+7f8b8f420000-7f8b8f51e000 rw-p 00000000 00:00 0 
+7f8b8f51e000-7f8b8f521000 ---p 00000000 00:00 0 
+7f8b8f521000-7f8b8f61f000 rw-p 00000000 00:00 0 
+7f8b8f61f000-7f8b8f622000 ---p 00000000 00:00 0 
+7f8b8f622000-7f8b90721000 rw-p 00000000 00:00 0 
+7f8b90721000-7f8b90724000 ---p 00000000 00:00 0 
+7f8b90724000-7f8b90822000 rw-p 00000000 00:00 0 
+7f8b90822000-7f8b90825000 ---p 00000000 00:00 0 
+7f8b90825000-7f8b90923000 rw-p 00000000 00:00 0 
+7f8b90923000-7f8b90926000 ---p 00000000 00:00 0 
+7f8b90926000-7f8b90a24000 rw-p 00000000 00:00 0 
+7f8b90a24000-7f8b90a27000 ---p 00000000 00:00 0 
+7f8b90a27000-7f8b90b25000 rw-p 00000000 00:00 0 
+7f8b90b25000-7f8b90b28000 ---p 00000000 00:00 0 
+7f8b90b28000-7f8b90c26000 rw-p 00000000 00:00 0 
+7f8b90c26000-7f8b90c29000 ---p 00000000 00:00 0 
+7f8b90c29000-7f8b90d27000 rw-p 00000000 00:00 0 
+7f8b90d27000-7f8b90d2a000 ---p 00000000 00:00 0 
+7f8b90d2a000-7f8b90e28000 rw-p 00000000 00:00 0 
+7f8b90e28000-7f8b90e2b000 ---p 00000000 00:00 0 
+7f8b90e2b000-7f8b90f29000 rw-p 00000000 00:00 0 
+7f8b90f29000-7f8b90f2c000 ---p 00000000 00:00 0 
+7f8b90f2c000-7f8b9102a000 rw-p 00000000 00:00 0 
+7f8b9102a000-7f8b9102d000 ---p 00000000 00:00 0 
+7f8b9102d000-7f8b9112b000 rw-p 00000000 00:00 0 
+7f8b9112b000-7f8b9112e000 ---p 00000000 00:00 0 
+7f8b9112e000-7f8b9122c000 rw-p 00000000 00:00 0 
+7f8b9122c000-7f8b9122f000 ---p 00000000 00:00 0 
+7f8b9122f000-7f8b9132d000 rw-p 00000000 00:00 0 
+7f8b9132d000-7f8b91330000 ---p 00000000 00:00 0 
+7f8b91330000-7f8b9142e000 rw-p 00000000 00:00 0 
+7f8b9142e000-7f8b91431000 ---p 00000000 00:00 0 
+7f8b91431000-7f8b9152f000 rw-p 00000000 00:00 0 
+7f8b9152f000-7f8b91532000 ---p 00000000 00:00 0 
+7f8b91532000-7f8b91630000 rw-p 00000000 00:00 0 
+7f8b91630000-7f8b91633000 ---p 00000000 00:00 0 
+7f8b91633000-7f8b91731000 rw-p 00000000 00:00 0 
+7f8b91731000-7f8b91734000 ---p 00000000 00:00 0 
+7f8b91734000-7f8b91832000 rw-p 00000000 00:00 0 
+7f8b91832000-7f8b91835000 ---p 00000000 00:00 0 
+7f8b91835000-7f8b91933000 rw-p 00000000 00:00 0 
+7f8b91933000-7f8b91936000 ---p 00000000 00:00 0 
+7f8b91936000-7f8b91a34000 rw-p 00000000 00:00 0 
+7f8b91a34000-7f8b91a37000 ---p 00000000 00:00 0 
+7f8b91a37000-7f8b91b35000 rw-p 00000000 00:00 0 
+7f8b91b35000-7f8b91b38000 ---p 00000000 00:00 0 
+7f8b91b38000-7f8b91c36000 rw-p 00000000 00:00 0 
+7f8b91c36000-7f8b91c39000 ---p 00000000 00:00 0 
+7f8b91c39000-7f8b91d37000 rw-p 00000000 00:00 0 
+7f8b91d37000-7f8b91d3a000 ---p 00000000 00:00 0 
+7f8b91d3a000-7f8b91e38000 rw-p 00000000 00:00 0 
+7f8b91e38000-7f8b91e3b000 ---p 00000000 00:00 0 
+7f8b91e3b000-7f8b91f39000 rw-p 00000000 00:00 0 
+7f8b91f39000-7f8b91f3c000 ---p 00000000 00:00 0 
+7f8b91f3c000-7f8b9203a000 rw-p 00000000 00:00 0 
+7f8b9203a000-7f8b9203d000 ---p 00000000 00:00 0 
+7f8b9203d000-7f8b9213b000 rw-p 00000000 00:00 0 
+7f8b9213b000-7f8b9213e000 ---p 00000000 00:00 0 
+7f8b9213e000-7f8b9223c000 rw-p 00000000 00:00 0 
+7f8b9223c000-7f8b9223f000 ---p 00000000 00:00 0 
+7f8b9223f000-7f8b9233d000 rw-p 00000000 00:00 0 
+7f8b9233d000-7f8b92340000 ---p 00000000 00:00 0 
+7f8b92340000-7f8b9243e000 rw-p 00000000 00:00 0 
+7f8b9243e000-7f8b92441000 ---p 00000000 00:00 0 
+7f8b92441000-7f8b9253f000 rw-p 00000000 00:00 0 
+7f8b9253f000-7f8b92542000 ---p 00000000 00:00 0 
+7f8b92542000-7f8b92640000 rw-p 00000000 00:00 0 
+7f8b92640000-7f8b92643000 ---p 00000000 00:00 0 
+7f8b92643000-7f8b92741000 rw-p 00000000 00:00 0 
+7f8b92741000-7f8b92744000 ---p 00000000 00:00 0 
+7f8b92744000-7f8b92842000 rw-p 00000000 00:00 0 
+7f8b92842000-7f8b92845000 ---p 00000000 00:00 0 
+7f8b92845000-7f8b92943000 rw-p 00000000 00:00 0 
+7f8b92943000-7f8b92946000 ---p 00000000 00:00 0 
+7f8b92946000-7f8b92a44000 rw-p 00000000 00:00 0 
+7f8b92a44000-7f8b92a47000 ---p 00000000 00:00 0 
+7f8b92a47000-7f8b92b45000 rw-p 00000000 00:00 0 
+7f8b92b45000-7f8b92b48000 ---p 00000000 00:00 0 
+7f8b92b48000-7f8b92c46000 rw-p 00000000 00:00 0 
+7f8b92c46000-7f8b92c49000 ---p 00000000 00:00 0 
+7f8b92c49000-7f8b92d47000 rw-p 00000000 00:00 0 
+7f8b92d47000-7f8b92d4a000 ---p 00000000 00:00 0 
+7f8b92d4a000-7f8b92e48000 rw-p 00000000 00:00 0 
+7f8b92e48000-7f8b92e4b000 ---p 00000000 00:00 0 
+7f8b92e4b000-7f8b92f49000 rw-p 00000000 00:00 0 
+7f8b92f49000-7f8b92f4c000 ---p 00000000 00:00 0 
+7f8b92f4c000-7f8b9304a000 rw-p 00000000 00:00 0 
+7f8b9304a000-7f8b9304d000 ---p 00000000 00:00 0 
+7f8b9304d000-7f8b9314b000 rw-p 00000000 00:00 0 
+7f8b9314b000-7f8b9314e000 ---p 00000000 00:00 0 
+7f8b9314e000-7f8b9324c000 rw-p 00000000 00:00 0 
+7f8b9324c000-7f8b9324f000 ---p 00000000 00:00 0 
+7f8b9324f000-7f8b9334d000 rw-p 00000000 00:00 0 
+7f8b9334d000-7f8b93350000 ---p 00000000 00:00 0 
+7f8b93350000-7f8b9344e000 rw-p 00000000 00:00 0 
+7f8b9344e000-7f8b93451000 ---p 00000000 00:00 0 
+7f8b93451000-7f8b9354f000 rw-p 00000000 00:00 0 
+7f8b9354f000-7f8b93552000 ---p 00000000 00:00 0 
+7f8b93552000-7f8b93650000 rw-p 00000000 00:00 0 
+7f8b93650000-7f8b93653000 ---p 00000000 00:00 0 
+7f8b93653000-7f8b93751000 rw-p 00000000 00:00 0 
+7f8b93751000-7f8b93754000 ---p 00000000 00:00 0 
+7f8b93754000-7f8b93852000 rw-p 00000000 00:00 0 
+7f8b93852000-7f8b93855000 ---p 00000000 00:00 0 
+7f8b93855000-7f8b93953000 rw-p 00000000 00:00 0 
+7f8b93953000-7f8b93956000 ---p 00000000 00:00 0 
+7f8b93956000-7f8b93a54000 rw-p 00000000 00:00 0 
+7f8b93a54000-7f8b93a57000 ---p 00000000 00:00 0 
+7f8b93a57000-7f8b93b55000 rw-p 00000000 00:00 0 
+7f8b93b55000-7f8b93b58000 ---p 00000000 00:00 0 
+7f8b93b58000-7f8b93c56000 rw-p 00000000 00:00 0 
+7f8b93c56000-7f8b93c59000 ---p 00000000 00:00 0 
+7f8b93c59000-7f8b93d57000 rw-p 00000000 00:00 0 
+7f8b93d57000-7f8b93d5a000 ---p 00000000 00:00 0 
+7f8b93d5a000-7f8b93e58000 rw-p 00000000 00:00 0 
+7f8b93e58000-7f8b93e5b000 ---p 00000000 00:00 0 
+7f8b93e5b000-7f8b93f59000 rw-p 00000000 00:00 0 
+7f8b93f59000-7f8b93f5c000 ---p 00000000 00:00 0 
+7f8b93f5c000-7f8b9405a000 rw-p 00000000 00:00 0 
+7f8b9405a000-7f8b9405d000 ---p 00000000 00:00 0 
+7f8b9405d000-7f8b9415b000 rw-p 00000000 00:00 0 
+7f8b9415b000-7f8b9415e000 ---p 00000000 00:00 0 
+7f8b9415e000-7f8b9425c000 rw-p 00000000 00:00 0 
+7f8b9425c000-7f8b9425f000 ---p 00000000 00:00 0 
+7f8b9425f000-7f8b9435d000 rw-p 00000000 00:00 0 
+7f8b9435d000-7f8b94360000 ---p 00000000 00:00 0 
+7f8b94360000-7f8b9445e000 rw-p 00000000 00:00 0 
+7f8b9445e000-7f8b94461000 ---p 00000000 00:00 0 
+7f8b94461000-7f8b9455f000 rw-p 00000000 00:00 0 
+7f8b9455f000-7f8b94562000 ---p 00000000 00:00 0 
+7f8b94562000-7f8b94660000 rw-p 00000000 00:00 0 
+7f8b94660000-7f8b94663000 ---p 00000000 00:00 0 
+7f8b94663000-7f8b94761000 rw-p 00000000 00:00 0 
+7f8b94761000-7f8b94764000 ---p 00000000 00:00 0 
+7f8b94764000-7f8b94862000 rw-p 00000000 00:00 0 
+7f8b94862000-7f8b94865000 ---p 00000000 00:00 0 
+7f8b94865000-7f8b94963000 rw-p 00000000 00:00 0 
+7f8b94963000-7f8b94966000 ---p 00000000 00:00 0 
+7f8b94966000-7f8b94a64000 rw-p 00000000 00:00 0 
+7f8b94a64000-7f8b94a67000 ---p 00000000 00:00 0 
+7f8b94a67000-7f8b94b65000 rw-p 00000000 00:00 0 
+7f8b94b65000-7f8b94b68000 ---p 00000000 00:00 0 
+7f8b94b68000-7f8b94c66000 rw-p 00000000 00:00 0 
+7f8b94c66000-7f8b94c69000 ---p 00000000 00:00 0 
+7f8b94c69000-7f8b94d67000 rw-p 00000000 00:00 0 
+7f8b94d67000-7f8b94d6a000 ---p 00000000 00:00 0 
+7f8b94d6a000-7f8b94e68000 rw-p 00000000 00:00 0 
+7f8b94e68000-7f8b94e6b000 ---p 00000000 00:00 0 
+7f8b94e6b000-7f8b94f69000 rw-p 00000000 00:00 0 
+7f8b94f69000-7f8b94f6c000 ---p 00000000 00:00 0 
+7f8b94f6c000-7f8b9506a000 rw-p 00000000 00:00 0 
+7f8b9506a000-7f8b9506d000 ---p 00000000 00:00 0 
+7f8b9506d000-7f8b9516b000 rw-p 00000000 00:00 0 
+7f8b9516b000-7f8b9516e000 ---p 00000000 00:00 0 
+7f8b9516e000-7f8b9526c000 rw-p 00000000 00:00 0 
+7f8b9526c000-7f8b9526f000 ---p 00000000 00:00 0 
+7f8b9526f000-7f8b9536d000 rw-p 00000000 00:00 0 
+7f8b9536d000-7f8b95370000 ---p 00000000 00:00 0 
+7f8b95370000-7f8b9546e000 rw-p 00000000 00:00 0 
+7f8b9546e000-7f8b95471000 ---p 00000000 00:00 0 
+7f8b95471000-7f8b9556f000 rw-p 00000000 00:00 0 
+7f8b9556f000-7f8b95572000 ---p 00000000 00:00 0 
+7f8b95572000-7f8b95670000 rw-p 00000000 00:00 0 
+7f8b95670000-7f8b95673000 ---p 00000000 00:00 0 
+7f8b95673000-7f8b95771000 rw-p 00000000 00:00 0 
+7f8b95771000-7f8b95774000 ---p 00000000 00:00 0 
+7f8b95774000-7f8b95872000 rw-p 00000000 00:00 0 
+7f8b95872000-7f8b95875000 ---p 00000000 00:00 0 
+7f8b95875000-7f8b95973000 rw-p 00000000 00:00 0 
+7f8b95973000-7f8b95976000 ---p 00000000 00:00 0 
+7f8b95976000-7f8b95a74000 rw-p 00000000 00:00 0 
+7f8b95a74000-7f8b95a77000 ---p 00000000 00:00 0 
+7f8b95a77000-7f8b95b75000 rw-p 00000000 00:00 0 
+7f8b95b75000-7f8b95b78000 ---p 00000000 00:00 0 
+7f8b95b78000-7f8b95c76000 rw-p 00000000 00:00 0 
+7f8b95c76000-7f8b95c79000 ---p 00000000 00:00 0 
+7f8b95c79000-7f8b95d77000 rw-p 00000000 00:00 0 
+7f8b95d77000-7f8b95d7a000 ---p 00000000 00:00 0 
+7f8b95d7a000-7f8b95e78000 rw-p 00000000 00:00 0 
+7f8b95e78000-7f8b95e7b000 ---p 00000000 00:00 0 
+7f8b95e7b000-7f8b95f79000 rw-p 00000000 00:00 0 
+7f8b95f79000-7f8b95f7c000 ---p 00000000 00:00 0 
+7f8b95f7c000-7f8b9607a000 rw-p 00000000 00:00 0 
+7f8b9607a000-7f8b9607d000 ---p 00000000 00:00 0 
+7f8b9607d000-7f8b9617b000 rw-p 00000000 00:00 0 
+7f8b9617b000-7f8b9617e000 ---p 00000000 00:00 0 
+7f8b9617e000-7f8b9627c000 rw-p 00000000 00:00 0 
+7f8b9627c000-7f8b9627f000 ---p 00000000 00:00 0 
+7f8b9627f000-7f8b9637d000 rw-p 00000000 00:00 0 
+7f8b9637d000-7f8b96380000 ---p 00000000 00:00 0 
+7f8b96380000-7f8b9647e000 rw-p 00000000 00:00 0 
+7f8b9647e000-7f8b96481000 ---p 00000000 00:00 0 
+7f8b96481000-7f8b9657f000 rw-p 00000000 00:00 0 
+7f8b9657f000-7f8b96582000 ---p 00000000 00:00 0 
+7f8b96582000-7f8b96680000 rw-p 00000000 00:00 0 
+7f8b96680000-7f8b96683000 ---p 00000000 00:00 0 
+7f8b96683000-7f8b96781000 rw-p 00000000 00:00 0 
+7f8b96781000-7f8b96784000 ---p 00000000 00:00 0 
+7f8b96784000-7f8b96882000 rw-p 00000000 00:00 0 
+7f8b96882000-7f8b96885000 ---p 00000000 00:00 0 
+7f8b96885000-7f8b96983000 rw-p 00000000 00:00 0 
+7f8b96983000-7f8b96986000 ---p 00000000 00:00 0 
+7f8b96986000-7f8b96a84000 rw-p 00000000 00:00 0 
+7f8b96a84000-7f8b96a87000 ---p 00000000 00:00 0 
+7f8b96a87000-7f8b96b85000 rw-p 00000000 00:00 0 
+7f8b96b85000-7f8b96b88000 ---p 00000000 00:00 0 
+7f8b96b88000-7f8b96c86000 rw-p 00000000 00:00 0 
+7f8b96c86000-7f8b96c89000 ---p 00000000 00:00 0 
+7f8b96c89000-7f8b96d87000 rw-p 00000000 00:00 0 
+7f8b96d87000-7f8b96d8a000 ---p 00000000 00:00 0 
+7f8b96d8a000-7f8b96e88000 rw-p 00000000 00:00 0 
+7f8b96e88000-7f8b96e8b000 ---p 00000000 00:00 0 
+7f8b96e8b000-7f8b96f89000 rw-p 00000000 00:00 0 
+7f8b96f89000-7f8b96f8c000 ---p 00000000 00:00 0 
+7f8b96f8c000-7f8b9708a000 rw-p 00000000 00:00 0 
+7f8b9708a000-7f8b9708d000 ---p 00000000 00:00 0 
+7f8b9708d000-7f8b9718b000 rw-p 00000000 00:00 0 
+7f8b9718b000-7f8b9718e000 ---p 00000000 00:00 0 
+7f8b9718e000-7f8b9728c000 rw-p 00000000 00:00 0 
+7f8b9728c000-7f8b9728f000 ---p 00000000 00:00 0 
+7f8b9728f000-7f8b9738d000 rw-p 00000000 00:00 0 
+7f8b9738d000-7f8b97390000 ---p 00000000 00:00 0 
+7f8b97390000-7f8b9748e000 rw-p 00000000 00:00 0 
+7f8b9748e000-7f8b97491000 ---p 00000000 00:00 0 
+7f8b97491000-7f8b9758f000 rw-p 00000000 00:00 0 
+7f8b9758f000-7f8b97592000 ---p 00000000 00:00 0 
+7f8b97592000-7f8b97690000 rw-p 00000000 00:00 0 
+7f8b97690000-7f8b97693000 ---p 00000000 00:00 0 
+7f8b97693000-7f8b97791000 rw-p 00000000 00:00 0 
+7f8b97791000-7f8b97794000 ---p 00000000 00:00 0 
+7f8b97794000-7f8b97892000 rw-p 00000000 00:00 0 
+7f8b97892000-7f8b97895000 ---p 00000000 00:00 0 
+7f8b97895000-7f8b97993000 rw-p 00000000 00:00 0 
+7f8b97993000-7f8b97996000 ---p 00000000 00:00 0 
+7f8b97996000-7f8b97a94000 rw-p 00000000 00:00 0 
+7f8b97a94000-7f8b97a97000 ---p 00000000 00:00 0 
+7f8b97a97000-7f8b97b95000 rw-p 00000000 00:00 0 
+7f8b97b95000-7f8b97b98000 ---p 00000000 00:00 0 
+7f8b97b98000-7f8b97c96000 rw-p 00000000 00:00 0 
+7f8b97c96000-7f8b97c99000 ---p 00000000 00:00 0 
+7f8b97c99000-7f8b97d97000 rw-p 00000000 00:00 0 
+7f8b97d97000-7f8b97d9a000 ---p 00000000 00:00 0 
+7f8b97d9a000-7f8b98058000 rw-p 00000000 00:00 0 
+7f8b98058000-7f8b98098000 ---p 00000000 00:00 0 
+7f8b98098000-7f8b98298000 rw-p 00000000 00:00 0 
+7f8b98298000-7f8b9829b000 ---p 00000000 00:00 0 
+7f8b9829b000-7f8b98399000 rw-p 00000000 00:00 0 
+7f8b98399000-7f8b9839c000 ---p 00000000 00:00 0 
+7f8b9839c000-7f8b9849a000 rw-p 00000000 00:00 0 
+7f8b9849a000-7f8b9849d000 ---p 00000000 00:00 0 
+7f8b9849d000-7f8b9859b000 rw-p 00000000 00:00 0 
+7f8b9859b000-7f8b9859e000 ---p 00000000 00:00 0 
+7f8b9859e000-7f8b9869c000 rw-p 00000000 00:00 0 
+7f8b9869c000-7f8b9869f000 ---p 00000000 00:00 0 
+7f8b9869f000-7f8b9879d000 rw-p 00000000 00:00 0 
+7f8b9879d000-7f8b987a0000 ---p 00000000 00:00 0 
+7f8b987a0000-7f8b9889e000 rw-p 00000000 00:00 0 
+7f8b9889e000-7f8b988a1000 ---p 00000000 00:00 0 
+7f8b988a1000-7f8b9899f000 rw-p 00000000 00:00 0 
+7f8b9899f000-7f8b989a2000 ---p 00000000 00:00 0 
+7f8b989a2000-7f8b98aa0000 rw-p 00000000 00:00 0 
+7f8b98aa0000-7f8b98aa3000 ---p 00000000 00:00 0 
+7f8b98aa3000-7f8b98ba1000 rw-p 00000000 00:00 0 
+7f8b98ba1000-7f8b98ba4000 ---p 00000000 00:00 0 
+7f8b98ba4000-7f8b98ca2000 rw-p 00000000 00:00 0 
+7f8b98ca2000-7f8b98ca5000 ---p 00000000 00:00 0 
+7f8b98ca5000-7f8b98da3000 rw-p 00000000 00:00 0 
+7f8b98da3000-7f8b98da6000 ---p 00000000 00:00 0 
+7f8b98da6000-7f8b98ea4000 rw-p 00000000 00:00 0 
+7f8b98ea4000-7f8b98ea7000 ---p 00000000 00:00 0 
+7f8b98ea7000-7f8b99fa6000 rw-p 00000000 00:00 0 
+7f8b99fcf000-7f8b99fd2000 ---p 00000000 00:00 0 
+7f8b99fd2000-7f8b9a0d0000 rw-p 00000000 00:00 0 
+7f8b9a0d0000-7f8b9a0d3000 ---p 00000000 00:00 0 
+7f8b9a0d3000-7f8b9a3d1000 rw-p 00000000 00:00 0 
+7f8b9a3d1000-7f8b9b3d2000 rw-p 00000000 00:00 0 
+7f8b9b3d2000-7f8b9b3d5000 ---p 00000000 00:00 0 
+7f8b9b3d5000-7f8b9b4d3000 rw-p 00000000 00:00 0 
+7f8b9b4d3000-7f8b9b4d6000 ---p 00000000 00:00 0 
+7f8b9b4d6000-7f8b9b7d4000 rw-p 00000000 00:00 0 
+7f8b9b7d4000-7f8b9b9d4000 rw-p 00000000 00:00 0 
+7f8b9b9d4000-7f8b9bbd4000 rw-p 00000000 00:00 0 
+7f8b9bbd4000-7f8b9bbfc000 r-xp 00000000 ca:01 160500                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f8b9bbfc000-7f8b9bdfb000 ---p 00028000 ca:01 160500                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f8b9bdfb000-7f8b9bdff000 r--p 00027000 ca:01 160500                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f8b9bdff000-7f8b9be00000 rw-p 0002b000 ca:01 160500                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libsunec.so
+7f8b9be00000-7f8b9c000000 rw-p 00000000 00:00 0 
+7f8b9c000000-7f8b9c715000 rw-p 00000000 00:00 0 
+7f8b9c715000-7f8ba0000000 ---p 00000000 00:00 0 
+7f8ba0000000-7f8ba0773000 rw-p 00000000 00:00 0 
+7f8ba0773000-7f8ba4000000 ---p 00000000 00:00 0 
+7f8ba4000000-7f8ba4077000 rw-p 00000000 00:00 0 
+7f8ba4077000-7f8ba8000000 ---p 00000000 00:00 0 
+7f8ba8000000-7f8ba9fc3000 rw-p 00000000 00:00 0 
+7f8ba9fc3000-7f8bac000000 ---p 00000000 00:00 0 
+7f8bac000000-7f8bac424000 rw-p 00000000 00:00 0 
+7f8bac424000-7f8bb0000000 ---p 00000000 00:00 0 
+7f8bb0000000-7f8bb0259000 rw-p 00000000 00:00 0 
+7f8bb0259000-7f8bb4000000 ---p 00000000 00:00 0 
+7f8bb4000000-7f8bb4543000 rw-p 00000000 00:00 0 
+7f8bb4543000-7f8bb8000000 ---p 00000000 00:00 0 
+7f8bb80d5000-7f8bb80d8000 ---p 00000000 00:00 0 
+7f8bb80d8000-7f8bb81d6000 rw-p 00000000 00:00 0 
+7f8bb81d6000-7f8bb81d9000 ---p 00000000 00:00 0 
+7f8bb81d9000-7f8bb82d7000 rw-p 00000000 00:00 0 
+7f8bb82d7000-7f8bb82da000 ---p 00000000 00:00 0 
+7f8bb82da000-7f8bb83d8000 rw-p 00000000 00:00 0 
+7f8bb83d8000-7f8bb83db000 ---p 00000000 00:00 0 
+7f8bb83db000-7f8bb84d9000 rw-p 00000000 00:00 0 
+7f8bb84d9000-7f8bb84dc000 ---p 00000000 00:00 0 
+7f8bb84dc000-7f8bb85da000 rw-p 00000000 00:00 0 
+7f8bb85da000-7f8bb85dd000 ---p 00000000 00:00 0 
+7f8bb85dd000-7f8bb86db000 rw-p 00000000 00:00 0 
+7f8bb86db000-7f8bb86de000 ---p 00000000 00:00 0 
+7f8bb86de000-7f8bb87dc000 rw-p 00000000 00:00 0 
+7f8bb87dc000-7f8bb87df000 ---p 00000000 00:00 0 
+7f8bb87df000-7f8bb88dd000 rw-p 00000000 00:00 0 
+7f8bb88dd000-7f8bb88e0000 ---p 00000000 00:00 0 
+7f8bb88e0000-7f8bb8bde000 rw-p 00000000 00:00 0 
+7f8bb8bde000-7f8bb8bf5000 r-xp 00000000 ca:01 400325                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f8bb8bf5000-7f8bb8df5000 ---p 00017000 ca:01 400325                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f8bb8df5000-7f8bb8df6000 r--p 00017000 ca:01 400325                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f8bb8df6000-7f8bb8df7000 rw-p 00018000 ca:01 400325                     /lib/x86_64-linux-gnu/libresolv-2.23.so
+7f8bb8df7000-7f8bb8df9000 rw-p 00000000 00:00 0 
+7f8bb8df9000-7f8bb8dfe000 r-xp 00000000 ca:01 400328                     /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f8bb8dfe000-7f8bb8ffe000 ---p 00005000 ca:01 400328                     /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f8bb8ffe000-7f8bb8fff000 r--p 00005000 ca:01 400328                     /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f8bb8fff000-7f8bb9000000 rw-p 00006000 ca:01 400328                     /lib/x86_64-linux-gnu/libnss_dns-2.23.so
+7f8bb9000000-7f8bba470000 rwxp 00000000 00:00 0 
+7f8bba470000-7f8bc8000000 ---p 00000000 00:00 0 
+7f8bc8000000-7f8bc8826000 rw-p 00000000 00:00 0 
+7f8bc8826000-7f8bcc000000 ---p 00000000 00:00 0 
+7f8bcc041000-7f8bcc054000 r--s 00346000 ca:01 160524                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar
+7f8bcc054000-7f8bcc057000 r--s 00015000 ca:01 160547                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar
+7f8bcc057000-7f8bcc05a000 ---p 00000000 00:00 0 
+7f8bcc05a000-7f8bcc158000 rw-p 00000000 00:00 0 
+7f8bcc158000-7f8bcc15c000 r--s 0009a000 ca:01 160546                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar
+7f8bcc15c000-7f8bcc35c000 rw-p 00000000 00:00 0 
+7f8bcc35c000-7f8bcc55c000 rw-p 00000000 00:00 0 
+7f8bcc55c000-7f8bcc565000 r-xp 00000000 ca:01 160513                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f8bcc565000-7f8bcc764000 ---p 00009000 ca:01 160513                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f8bcc764000-7f8bcc765000 r--p 00008000 ca:01 160513                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f8bcc765000-7f8bcc766000 rw-p 00009000 ca:01 160513                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f8bcc766000-7f8bcc966000 rw-p 00000000 00:00 0 
+7f8bcc966000-7f8bcc969000 ---p 00000000 00:00 0 
+7f8bcc969000-7f8bccd68000 rw-p 00000000 00:00 0 
+7f8bccd68000-7f8bccd7f000 r-xp 00000000 ca:01 160497                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f8bccd7f000-7f8bccf7e000 ---p 00017000 ca:01 160497                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f8bccf7e000-7f8bccf7f000 r--p 00016000 ca:01 160497                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f8bccf7f000-7f8bccf80000 rw-p 00017000 ca:01 160497                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnet.so
+7f8bccf80000-7f8bccf91000 r-xp 00000000 ca:01 160505                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8bccf91000-7f8bcd191000 ---p 00011000 ca:01 160505                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8bcd191000-7f8bcd192000 r--p 00011000 ca:01 160505                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8bcd192000-7f8bcd193000 rw-p 00012000 ca:01 160505                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libnio.so
+7f8bcd193000-7f8bcd31b000 r--s 01354000 ca:01 284516                     /home/ubuntu/test/browsermob-proxy-2.1.4/lib/browsermob-dist-2.1.4.jar
+7f8bcd31b000-7f8bcd336000 r--s 00394000 ca:01 160539                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/cldrdata.jar
+7f8bcd336000-7f8bcd351000 r--s 001d6000 ca:01 160536                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/nashorn.jar
+7f8bcd351000-7f8bcd352000 ---p 00000000 00:00 0 
+7f8bcd352000-7f8bcd452000 rw-p 00000000 00:00 0 
+7f8bcd452000-7f8bcd455000 ---p 00000000 00:00 0 
+7f8bcd455000-7f8bcd553000 rw-p 00000000 00:00 0 
+7f8bcd553000-7f8bcd556000 ---p 00000000 00:00 0 
+7f8bcd556000-7f8bcd654000 rw-p 00000000 00:00 0 
+7f8bcd654000-7f8bcd657000 ---p 00000000 00:00 0 
+7f8bcd657000-7f8bcd755000 rw-p 00000000 00:00 0 
+7f8bcd755000-7f8bcd758000 ---p 00000000 00:00 0 
+7f8bcd758000-7f8bcd856000 rw-p 00000000 00:00 0 
+7f8bcd856000-7f8bcd859000 ---p 00000000 00:00 0 
+7f8bcd859000-7f8bcd957000 rw-p 00000000 00:00 0 
+7f8bcd957000-7f8bcd95a000 ---p 00000000 00:00 0 
+7f8bcd95a000-7f8bcda58000 rw-p 00000000 00:00 0 
+7f8bcda58000-7f8bcda59000 ---p 00000000 00:00 0 
+7f8bcda59000-7f8bcdba6000 rw-p 00000000 00:00 0 
+7f8bcdba6000-7f8bcdd74000 r--s 03c06000 ca:01 160550                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar
+7f8bcdd74000-7f8bce645000 rw-p 00000000 00:00 0 
+7f8bce645000-7f8bce697000 rw-p 00000000 00:00 0 
+7f8bce697000-7f8bcea05000 ---p 00000000 00:00 0 
+7f8bcea05000-7f8bcea0d000 r-xp 00000000 ca:01 160495                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f8bcea0d000-7f8bcec0c000 ---p 00008000 ca:01 160495                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f8bcec0c000-7f8bcec0d000 r--p 00007000 ca:01 160495                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f8bcec0d000-7f8bcec0e000 rw-p 00008000 ca:01 160495                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libzip.so
+7f8bcec0e000-7f8bcec19000 r-xp 00000000 ca:01 400316                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f8bcec19000-7f8bcee18000 ---p 0000b000 ca:01 400316                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f8bcee18000-7f8bcee19000 r--p 0000a000 ca:01 400316                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f8bcee19000-7f8bcee1a000 rw-p 0000b000 ca:01 400316                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f8bcee1a000-7f8bcee20000 rw-p 00000000 00:00 0 
+7f8bcee20000-7f8bcee2b000 r-xp 00000000 ca:01 400309                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f8bcee2b000-7f8bcf02a000 ---p 0000b000 ca:01 400309                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f8bcf02a000-7f8bcf02b000 r--p 0000a000 ca:01 400309                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f8bcf02b000-7f8bcf02c000 rw-p 0000b000 ca:01 400309                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f8bcf02c000-7f8bcf042000 r-xp 00000000 ca:01 400311                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8bcf042000-7f8bcf241000 ---p 00016000 ca:01 400311                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8bcf241000-7f8bcf242000 r--p 00015000 ca:01 400311                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8bcf242000-7f8bcf243000 rw-p 00016000 ca:01 400311                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f8bcf243000-7f8bcf245000 rw-p 00000000 00:00 0 
+7f8bcf245000-7f8bcf24d000 r-xp 00000000 ca:01 400318                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8bcf24d000-7f8bcf44c000 ---p 00008000 ca:01 400318                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8bcf44c000-7f8bcf44d000 r--p 00007000 ca:01 400318                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8bcf44d000-7f8bcf44e000 rw-p 00008000 ca:01 400318                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f8bcf44e000-7f8bcf47b000 r-xp 00000000 ca:01 160522                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8bcf47b000-7f8bcf67a000 ---p 0002d000 ca:01 160522                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8bcf67a000-7f8bcf67b000 r--p 0002c000 ca:01 160522                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8bcf67b000-7f8bcf67d000 rw-p 0002d000 ca:01 160522                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libjava.so
+7f8bcf67d000-7f8bcf68c000 r-xp 00000000 ca:01 160488                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f8bcf68c000-7f8bcf88b000 ---p 0000f000 ca:01 160488                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f8bcf88b000-7f8bcf88d000 r--p 0000e000 ca:01 160488                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f8bcf88d000-7f8bcf88e000 rw-p 00010000 ca:01 160488                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/libverify.so
+7f8bcf88e000-7f8bcf895000 r-xp 00000000 ca:01 400319                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f8bcf895000-7f8bcfa94000 ---p 00007000 ca:01 400319                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f8bcfa94000-7f8bcfa95000 r--p 00006000 ca:01 400319                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f8bcfa95000-7f8bcfa96000 rw-p 00007000 ca:01 400319                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f8bcfa96000-7f8bcfaac000 r-xp 00000000 ca:01 396911                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f8bcfaac000-7f8bcfcab000 ---p 00016000 ca:01 396911                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f8bcfcab000-7f8bcfcac000 rw-p 00015000 ca:01 396911                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f8bcfcac000-7f8bcfdb4000 r-xp 00000000 ca:01 400310                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f8bcfdb4000-7f8bcffb3000 ---p 00108000 ca:01 400310                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f8bcffb3000-7f8bcffb4000 r--p 00107000 ca:01 400310                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f8bcffb4000-7f8bcffb5000 rw-p 00108000 ca:01 400310                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f8bcffb5000-7f8bd0127000 r-xp 00000000 ca:01 5390                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8bd0127000-7f8bd0327000 ---p 00172000 ca:01 5390                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8bd0327000-7f8bd0331000 r--p 00172000 ca:01 5390                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8bd0331000-7f8bd0333000 rw-p 0017c000 ca:01 5390                       /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f8bd0333000-7f8bd0337000 rw-p 00000000 00:00 0 
+7f8bd0337000-7f8bd0f87000 r-xp 00000000 ca:01 160517                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f8bd0f87000-7f8bd1186000 ---p 00c50000 ca:01 160517                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f8bd1186000-7f8bd1219000 r--p 00c4f000 ca:01 160517                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f8bd1219000-7f8bd1242000 rw-p 00ce2000 ca:01 160517                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f8bd1242000-7f8bd1272000 rw-p 00000000 00:00 0 
+7f8bd1272000-7f8bd128a000 r-xp 00000000 ca:01 400323                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8bd128a000-7f8bd1489000 ---p 00018000 ca:01 400323                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8bd1489000-7f8bd148a000 r--p 00017000 ca:01 400323                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8bd148a000-7f8bd148b000 rw-p 00018000 ca:01 400323                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f8bd148b000-7f8bd148f000 rw-p 00000000 00:00 0 
+7f8bd148f000-7f8bd1492000 r-xp 00000000 ca:01 400308                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8bd1492000-7f8bd1691000 ---p 00003000 ca:01 400308                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8bd1691000-7f8bd1692000 r--p 00002000 ca:01 400308                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8bd1692000-7f8bd1693000 rw-p 00003000 ca:01 400308                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f8bd1693000-7f8bd16ac000 r-xp 00000000 ca:01 396982                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f8bd16ac000-7f8bd18ab000 ---p 00019000 ca:01 396982                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f8bd18ab000-7f8bd18ac000 r--p 00018000 ca:01 396982                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f8bd18ac000-7f8bd18ad000 rw-p 00019000 ca:01 396982                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f8bd18ad000-7f8bd1a6c000 r-xp 00000000 ca:01 400312                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f8bd1a6c000-7f8bd1c6c000 ---p 001bf000 ca:01 400312                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f8bd1c6c000-7f8bd1c70000 r--p 001bf000 ca:01 400312                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f8bd1c70000-7f8bd1c72000 rw-p 001c3000 ca:01 400312                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f8bd1c72000-7f8bd1c76000 rw-p 00000000 00:00 0 
+7f8bd1c76000-7f8bd1c83000 r-xp 00000000 ca:01 160511                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f8bd1c83000-7f8bd1e83000 ---p 0000d000 ca:01 160511                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f8bd1e83000-7f8bd1e84000 r--p 0000d000 ca:01 160511                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f8bd1e84000-7f8bd1e85000 rw-p 0000e000 ca:01 160511                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f8bd1e85000-7f8bd1eab000 r-xp 00000000 ca:01 400313                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f8bd1eac000-7f8bd1eb1000 r--s 0003b000 ca:01 160543                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunjce_provider.jar
+7f8bd1eb1000-7f8bd1eb5000 r--s 00037000 ca:01 160541                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunpkcs11.jar
+7f8bd1eb5000-7f8bd1ebf000 r--s 00116000 ca:01 160542                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/localedata.jar
+7f8bd1ebf000-7f8bd1ec0000 r--s 00010000 ca:01 160540                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/zipfs.jar
+7f8bd1ec0000-7f8bd1ec2000 r--s 00001000 ca:01 160537                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/dnsns.jar
+7f8bd1ec2000-7f8bd1ec5000 r--s 0000f000 ca:01 160538                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/icedtea-sound.jar
+7f8bd1ec5000-7f8bd1ec7000 r--s 00008000 ca:01 160535                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/sunec.jar
+7f8bd1ec7000-7f8bd1ec8000 r--s 0000a000 ca:01 160544                     /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/ext/jaccess.jar
+7f8bd1ec8000-7f8bd1eee000 rw-p 00000000 00:00 0 
+7f8bd1eee000-7f8bd1f1b000 ---p 00000000 00:00 0 
+7f8bd1f1b000-7f8bd1f2e000 rw-p 00000000 00:00 0 
+7f8bd1f2e000-7f8bd1f44000 ---p 00000000 00:00 0 
+7f8bd1f44000-7f8bd1f6b000 rw-p 00000000 00:00 0 
+7f8bd1f6b000-7f8bd1f97000 ---p 00000000 00:00 0 
+7f8bd1f97000-7f8bd1f98000 rw-p 00000000 00:00 0 
+7f8bd1f98000-7f8bd1f9b000 ---p 00000000 00:00 0 
+7f8bd1f9b000-7f8bd209e000 rw-p 00000000 00:00 0 
+7f8bd209e000-7f8bd20a6000 rw-s 00000000 ca:01 135358                     /tmp/hsperfdata_root/1305
+7f8bd20a6000-7f8bd20a7000 rw-p 00000000 00:00 0 
+7f8bd20a7000-7f8bd20a8000 ---p 00000000 00:00 0 
+7f8bd20a8000-7f8bd20aa000 rw-p 00000000 00:00 0 
+7f8bd20aa000-7f8bd20ab000 r--p 00025000 ca:01 400313                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f8bd20ab000-7f8bd20ac000 rw-p 00026000 ca:01 400313                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f8bd20ac000-7f8bd20ad000 rw-p 00000000 00:00 0 
+7fffc6249000-7fffc626a000 rw-p 00000000 00:00 0                          [stack]
+7fffc6363000-7fffc6365000 r--p 00000000 00:00 0                          [vvar]
+7fffc6365000-7fffc6367000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dapp.name=browsermob-proxy -Dbasedir=/home/ubuntu/test/browsermob-proxy-2.1.4 
+java_command: /home/ubuntu/test/browsermob-proxy-2.1.4/lib/browsermob-dist-2.1.4.jar --port=8080
+java_class_path (initial): /home/ubuntu/test/browsermob-proxy-2.1.4/lib/browsermob-dist-2.1.4.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+USERNAME=root
+SHELL=/bin/bash
+DISPLAY=:1001
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa66fd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa66fd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8b0180], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8b0030], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8b0500], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.2 LTS"
+
+uname:Linux 4.4.0-75-generic #96-Ubuntu SMP Thu Apr 20 09:56:33 UTC 2017 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 3889, NOFILE 65536, AS infinity
+load average:6.53 4.81 2.51
+
+/proc/meminfo:
+MemTotal:        1014376 kB
+MemFree:           10476 kB
+MemAvailable:      22152 kB
+Buffers:             664 kB
+Cached:            27064 kB
+SwapCached:            0 kB
+Active:           919356 kB
+Inactive:          15336 kB
+Active(anon):     909844 kB
+Inactive(anon):     5756 kB
+Active(file):       9512 kB
+Inactive(file):     9580 kB
+Unevictable:        3656 kB
+Mlocked:            3656 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               196 kB
+Writeback:             0 kB
+AnonPages:        910692 kB
+Mapped:            21176 kB
+Shmem:              6144 kB
+Slab:              30652 kB
+SReclaimable:      12024 kB
+SUnreclaim:        18628 kB
+KernelStack:        8400 kB
+PageTables:         9372 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      507188 kB
+Committed_AS:    1777096 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    303104 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       43008 kB
+DirectMap2M:     1136640 kB
+
+
+CPU:total 1 (1 cores per cpu, 1 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, tsc, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz
+stepping	: 2
+microcode	: 0x36
+cpu MHz		: 2400.068
+cache size	: 30720 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
+bugs		:
+bogomips	: 4800.13
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 1014376k(10476k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.121-b13) for linux-amd64 JRE (1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13), built on Jan 23 2017 15:51:29 by "buildd" with gcc 5.4.0 20160609
+
+time: Sat May  6 21:06:58 2017
+elapsed time: 946 seconds (0d 0h 15m 46s)
+
