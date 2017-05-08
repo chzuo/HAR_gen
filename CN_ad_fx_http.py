@@ -18,7 +18,7 @@ webslist = [line.rstrip('\r\n') for line in open('china.txt')]
 
 server = Server("browsermob-proxy-2.1.4/bin/browsermob-proxy")
 server.start()
-for j in range(10):
+for j in range(9,10):
     for i in range(0,30):  
         profile  = webdriver.FirefoxProfile()
         proxy = server.create_proxy()
